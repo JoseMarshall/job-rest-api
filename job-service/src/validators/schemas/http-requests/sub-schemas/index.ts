@@ -21,5 +21,5 @@ export const announcerSchema = joi.object({
 });
 
 export const idSchema = {
-  id: joi.string().uuid({ version: 'uuidv4' }),
+  id: joi.string().uuid({ version: 'uuidv4' }).required(),
 };
