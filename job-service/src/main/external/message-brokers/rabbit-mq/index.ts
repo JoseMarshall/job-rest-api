@@ -11,7 +11,9 @@ class RabbitMQ implements MessageBroker<Connection, Channel> {
   }
 
   async disconnect() {
-    await this.connection.close();
+    setTimeout(() => {
+      this.connection.close();
+    }, 500);
   }
 
   async createChannel() {
