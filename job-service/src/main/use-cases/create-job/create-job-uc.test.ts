@@ -12,12 +12,23 @@ import { JobModel } from '../../external/repositories/mongodb/models';
 import uow from '../../external/repositories/mongodb/unit-of-work';
 import { createJobUC } from './index';
 
+const mockMessageBroker = jest.fn().mockReturnValue({
+  connect: jest.fn(async () => ({
+    createChannel: jest.fn(async () => ({
+      assertQueue: jest.fn(),
+      sendToQueue: jest.fn(),
+    })),
+  })),
+  disconnect: jest.fn(async () => ({})),
+});
+
 const makeSut = () => ({
   sut: createJobUC,
+  messageBroker: mockMessageBroker(),
 });
 
 describe(`${createJobUC.name} use-case`, () => {
-  const { sut } = makeSut();
+  const { sut, messageBroker } = makeSut();
 
   beforeAll(async () => {
     await connect();
@@ -31,10 +42,9 @@ describe(`${createJobUC.name} use-case`, () => {
 
   it('should create an account', async () => {
     const newJob = new JobBuilder().withAll().build();
-    const result = await makeSutRequest(sut(uow()), newJob);
+    const result = await makeSutRequest(sut({ uow: uow(), messageBroker }), newJob);
     const validated = await createJobValidator(result.payload);
 
     expect(validated).toBeDefined();
-    expect(result.payload).toMatchObject(newJob);
   });
 });

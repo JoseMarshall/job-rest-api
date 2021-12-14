@@ -1,10 +1,11 @@
 FROM node:14 as base
 
-WORKDIR /usr/src/yoda-pay
+WORKDIR /usr/src/job-service
 
 COPY package*.json ./
 COPY tsconfig.json ./
-RUN npm install
+RUN npm install --production
+EXPOSE 4000
 
 COPY src ./src
 

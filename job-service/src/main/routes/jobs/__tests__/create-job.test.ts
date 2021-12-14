@@ -11,6 +11,11 @@ import createJobValidator from '../../../../../test-suite/validations/schemas/ht
 import { ApiMessages, CollectionNames } from '../../../../constants';
 import { JobModel } from '../../../external/repositories/mongodb/models';
 
+jest.mock('../../../external/message-brokers/helpers.ts', () => ({
+  __esModule: true,
+  pubMessage: jest.fn(async () => ({})),
+}));
+
 describe(`Method POST /api/v1/jobs should create a job`, () => {
   beforeAll(async () => {
     await connect();
