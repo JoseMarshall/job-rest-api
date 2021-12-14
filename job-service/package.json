@@ -1,5 +1,5 @@
 {
-	"name": "job-rest-api",
+	"name": "job-service",
 	"version": "1.0.0",
 	"description": "REST API for search jobs",
 	"main": "built/src/main/server.js",

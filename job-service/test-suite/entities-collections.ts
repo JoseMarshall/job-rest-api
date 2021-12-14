@@ -1,6 +1,5 @@
 import { CollectionNames } from '../src/constants';
 import jobs from './collections/job-collection';
-import subscriptions from './collections/subscription-collection';
 
 interface CollectionElement {
   id: string;
@@ -12,5 +11,4 @@ interface CollectionElement {
 
 export default {
   [CollectionNames.Jobs]: jobs,
-  [CollectionNames.Subscriptions]: subscriptions,
-} as Record<`${CollectionNames}`, ReadonlyArray<CollectionElement>>;
+} as Record<CollectionNames.Jobs, ReadonlyArray<CollectionElement>>;
