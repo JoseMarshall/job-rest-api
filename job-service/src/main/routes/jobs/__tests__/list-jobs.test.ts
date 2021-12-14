@@ -10,7 +10,7 @@ import { MsgBodyErrorValidator } from '../../../../../test-suite/validations/sch
 import { CollectionNames } from '../../../../constants';
 import { JobModel } from '../../../external/repositories/mongodb/models';
 
-describe(`Method GET api/v1/jobs should list Jobs`, () => {
+describe(`Method GET /api/v1/jobs should list Jobs`, () => {
   beforeAll(async () => {
     await connect();
     await collectionInit(JobModel, CollectionNames.Jobs);
@@ -22,7 +22,7 @@ describe(`Method GET api/v1/jobs should list Jobs`, () => {
   });
 
   it('should return a 200 code response', async () => {
-    const response = await apiRequest.get('api/v1/jobs').query({ page: '1', limit: '3' }).send();
+    const response = await apiRequest.get('/api/v1/jobs').query({ page: '1', limit: '3' }).send();
     const validated = await getAllJobsValidator(response.body.payload);
 
     expect(response.status).toBe(200);
@@ -32,7 +32,7 @@ describe(`Method GET api/v1/jobs should list Jobs`, () => {
 
   it('should return a 200 code response - Filter by title', async () => {
     const response = await apiRequest
-      .get('api/v1/jobs')
+      .get('/api/v1/jobs')
       .query({ page: '1', limit: '3', title: 'Developer' })
       .send();
     const validated = await getAllJobsValidator(response.body.payload);
@@ -43,7 +43,7 @@ describe(`Method GET api/v1/jobs should list Jobs`, () => {
 
   it('should return a 200 code response - Filter by skills', async () => {
     const response = await apiRequest
-      .get('api/v1/jobs')
+      .get('/api/v1/jobs')
       .query({ page: '1', limit: '3', skills: 'node.js,react.js,mongodb' })
       .send();
     const validated = await getAllJobsValidator(response.body.payload);
@@ -54,7 +54,7 @@ describe(`Method GET api/v1/jobs should list Jobs`, () => {
 
   it('should return a 200 code response - Filter by company name', async () => {
     const response = await apiRequest
-      .get('api/v1/jobs')
+      .get('/api/v1/jobs')
       .query({ page: '1', limit: '3', 'company-name': 'TAIKAI' })
       .send();
     const validated = await getAllJobsValidator(response.body.payload);
@@ -64,7 +64,7 @@ describe(`Method GET api/v1/jobs should list Jobs`, () => {
   });
 
   it('should return a 422 since page is not valid', async () => {
-    const response = await apiRequest.get('api/v1/jobs').query({ page: 'abc', limit: '3' }).send();
+    const response = await apiRequest.get('/api/v1/jobs').query({ page: 'abc', limit: '3' }).send();
     const validated = await MsgBodyErrorValidator(response.body);
 
     expect(response.status).toBe(422);

@@ -16,10 +16,13 @@ export enum ApiMessages {
   RequestProcessedError = 'The request was well-formed but was unable to be followed due to semantic errors',
   NoMatchedSchema = 'The data sent does not obey the defined schema',
   CreatedSuccessfully = 'Entity created successfully!',
+  DeletedSuccessfully = 'Entity deleted successfully!',
   FoundSuccessfully = 'Entities found, check the result on payload',
   UpdatedSuccessfully = 'Entity updated successfully!',
-  FailureCreating = 'Failed to create the entity, probably due to some data entered incorrectly, please check your form data',
-  FailureUpdating = 'Failed to update the entity, probably due to some data entered incorrectly, please check the data on your form',
+  EntityNotFound = 'Entity not found',
+  FailureCreating = 'Failed creating the entity, probably due to some data entered incorrectly, please check your form data',
+  FailureUpdating = 'Failed updating the entity, probably due to some data entered incorrectly, please check the data on your form',
+  FailureDeleting = 'Failed deleting the entity, probably due to some data entered incorrectly, please check the data on your form',
 }
 
 export type ApiErrorsStatusCode =

@@ -11,7 +11,7 @@ import { MsgBodyErrorValidator } from '../../../../../test-suite/validations/sch
 import { ApiMessages, CollectionNames } from '../../../../constants';
 import { JobModel } from '../../../external/repositories/mongodb/models';
 
-describe(`Method POST api/v1/jobs should create a job`, () => {
+describe(`Method POST /api/v1/jobs should create a job`, () => {
   beforeAll(async () => {
     await connect();
     await collectionInit(JobModel, CollectionNames.Jobs);
@@ -24,7 +24,7 @@ describe(`Method POST api/v1/jobs should create a job`, () => {
 
   it('should return a 201 code response', async () => {
     const newJob = new JobBuilder().withAll().build();
-    const response = await apiRequest.post('api/v1/jobs').send(newJob);
+    const response = await apiRequest.post('/api/v1/jobs').send(newJob);
     const validated = await createJobValidator(response.body.payload);
 
     expect(response.status).toBe(201);
@@ -34,7 +34,7 @@ describe(`Method POST api/v1/jobs should create a job`, () => {
 
   it('should return a 422 code response due to invalid fields - Invalid Title', async () => {
     const newJob = new JobBuilder().withAll().withTitle('A').build();
-    const response = await apiRequest.post('api/v1/jobs').send(newJob);
+    const response = await apiRequest.post('/api/v1/jobs').send(newJob);
 
     const validated = await MsgBodyErrorValidator(response.body);
     expect(response.status).toBe(422);

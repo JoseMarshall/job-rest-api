@@ -14,7 +14,7 @@ import { MsgBodyErrorValidator } from '../../../../../test-suite/validations/sch
 import { ApiMessages, CollectionNames } from '../../../../constants';
 import { JobModel } from '../../../external/repositories/mongodb/models';
 
-describe(`Method PATCH api/v1/jobs/:id should update a job`, () => {
+describe(`Method PATCH /api/v1/jobs/:id should update a job`, () => {
   beforeAll(async () => {
     await connect();
     await collectionInit(JobModel, CollectionNames.Jobs);
@@ -28,7 +28,7 @@ describe(`Method PATCH api/v1/jobs/:id should update a job`, () => {
   it('should return a 200 code response', async () => {
     const { id } = collections.jobs[0];
     const updatingField = new JobBuilder().withTitle().build();
-    const response = await apiRequest.patch(`api/v1/jobs/${id}`).send(updatingField);
+    const response = await apiRequest.patch(`/api/v1/jobs/${id}`).send(updatingField);
     const validated = await updateJobValidator(response.body.payload);
 
     expect(response.status).toBe(200);
@@ -39,7 +39,7 @@ describe(`Method PATCH api/v1/jobs/:id should update a job`, () => {
   it('should return a 422 code response due to job not found', async () => {
     const updatingField = new JobBuilder().withTitle().build();
     const response = await apiRequest
-      .patch(`api/v1/jobs/${faker.datatype.uuid()}`)
+      .patch(`/api/v1/jobs/${faker.datatype.uuid()}`)
       .send(updatingField);
 
     const validated = await MsgBodyErrorValidator(response.body);
