@@ -10,7 +10,7 @@ export const makeCaseInsensitiveRegex = (x: string): RegExp => new RegExp(`.*${x
  * @param query The object to format
  * @returns An object with case insensitive regex pattern in all of its string entries
  */
-export const formatQueryToRegex = (query: Record<string, string>): Record<string, unknown> =>
+export const formatQueryToRegex = (query: Record<string, any>): Record<string, unknown> =>
   Object.keys(query).reduce((acc: Record<string, unknown>, queryKey: string) => {
     const value = query[queryKey];
     return typeof value !== 'string'

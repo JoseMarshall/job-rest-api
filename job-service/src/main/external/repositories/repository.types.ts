@@ -12,10 +12,7 @@ export type QueryGetAll = {
   sort?: string;
 };
 
-export interface Query {
-  id?: string;
-  [x: string]: unknown;
-}
+export type Query = Record<string, any>;
 
 export interface DeletedEntity {
   id: string;
