@@ -9,12 +9,30 @@ const listAccounts = makeGetAllEntitiesController<IJob, GetAllJobs>({
   findAll: listJobsUC(uow()),
   requestValidator: makeGetAllJobsValidator(),
   queryFormatter: (query: GetAllJobs) => {
-    const { 'company-market': CompanyMarket, 'company-name': CompanyName, ...restOfQuery } = query;
+    const {
+      'company-market': companyMarket,
+      'company-name': companyName,
+      planet,
+      country,
+      city,
+      skills,
+      ...restOfQuery
+    } = query;
 
     return {
       ...restOfQuery,
-      ...(CompanyMarket ? { CompanyMarket } : {}),
-      ...(CompanyName ? { CompanyName } : {}),
+      ...(companyMarket ? { companyMarket } : {}),
+      ...(companyName ? { companyName } : {}),
+      ...(planet ? { 'location.planet': planet } : {}),
+      ...(country ? { 'location.country': country } : {}),
+      ...(city ? { 'location.city': city } : {}),
+      ...(skills
+        ? {
+            skills: {
+              $in: (skills as string).split(',').map(skill => new RegExp(`.*${skill}.*`, 'i')),
+            },
+          }
+        : {}),
     };
   },
 });

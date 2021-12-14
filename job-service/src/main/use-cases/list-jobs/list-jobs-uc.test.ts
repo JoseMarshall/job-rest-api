@@ -8,8 +8,8 @@ import {
 import getAllJobsValidator from '../../../../test-suite/validations/schemas/http-response/job/get-all-jobs-validator';
 import { CollectionNames } from '../../../constants';
 import { JobModel } from '../../external/repositories/mongodb/models';
-import { listJobsUC } from './index';
 import uow from '../../external/repositories/mongodb/unit-of-work';
+import { listJobsUC } from './index';
 
 const makeSut = async () => ({
   sut: listJobsUC,

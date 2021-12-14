@@ -6,12 +6,12 @@ import {
   dropDatabase,
   makeSutRequest,
 } from '../../../../test-suite/utils';
-import deleteJobValidator from '../../../../test-suite/validations/schemas/http-response/job/delete-one-job-validator';
 import customErrorValidator from '../../../../test-suite/validations/schemas/http-response/errors/custom-error';
+import deleteJobValidator from '../../../../test-suite/validations/schemas/http-response/job/delete-one-job-validator';
 import { CollectionNames } from '../../../constants';
 import { JobModel } from '../../external/repositories/mongodb/models';
-import { deleteJobUC } from './index';
 import uow from '../../external/repositories/mongodb/unit-of-work';
+import { deleteJobUC } from './index';
 
 const makeSut = async () => ({
   sut: deleteJobUC,

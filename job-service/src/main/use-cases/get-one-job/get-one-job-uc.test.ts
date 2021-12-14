@@ -6,12 +6,12 @@ import {
   dropDatabase,
   makeSutRequest,
 } from '../../../../test-suite/utils';
-import getOneJobValidator from '../../../../test-suite/validations/schemas/http-response/job/get-one-job-validator';
 import customErrorValidator from '../../../../test-suite/validations/schemas/http-response/errors/custom-error';
+import getOneJobValidator from '../../../../test-suite/validations/schemas/http-response/job/get-one-job-validator';
 import { CollectionNames } from '../../../constants';
 import { JobModel } from '../../external/repositories/mongodb/models';
-import { getOneJobUC } from './index';
 import uow from '../../external/repositories/mongodb/unit-of-work';
+import { getOneJobUC } from './index';
 
 const makeSut = async () => ({
   sut: getOneJobUC,

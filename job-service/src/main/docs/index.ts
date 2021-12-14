@@ -3,9 +3,9 @@ import { createJob, deleteJob, getOneJob, listJobs, updateJob } from './paths/jo
 import { createJobRequestBodySchema, updateJobRequestBodySchema } from './schemas/request-body';
 import {
   createJobResponseBodySchema,
-  listJobsResponseBodySchema,
   deleteJobResponseBodySchema,
   getOneJobResponseBodySchema,
+  listJobsResponseBodySchema,
   updateJobResponseBodySchema,
 } from './schemas/response-body';
 

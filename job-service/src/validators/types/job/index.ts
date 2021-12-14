@@ -5,7 +5,7 @@ export interface GetAllJobs extends GetAll {
   title?: string;
   'company-name'?: string;
   'company-market'?: string;
-  skills?: string;
+  skills?: string | Record<string, unknown>;
   type?: string;
   planet?: string;
   country?: string;

@@ -1,3 +1,4 @@
+import jobCollection from '../../../../../test-suite/collections/job-collection';
 import {
   apiRequest,
   collectionInit,
@@ -5,8 +6,8 @@ import {
   disconnect,
   dropDatabase,
 } from '../../../../../test-suite/utils';
-import getAllJobsValidator from '../../../../../test-suite/validations/schemas/http-response/job/get-all-jobs-validator';
 import { MsgBodyErrorValidator } from '../../../../../test-suite/validations/schemas/http-response/errors/custom-error';
+import getAllJobsValidator from '../../../../../test-suite/validations/schemas/http-response/job/get-all-jobs-validator';
 import { CollectionNames } from '../../../../constants';
 import { JobModel } from '../../../external/repositories/mongodb/models';
 
@@ -42,13 +43,15 @@ describe(`Method GET /api/v1/jobs should list Jobs`, () => {
   });
 
   it('should return a 200 code response - Filter by skills', async () => {
+    const { skills } = jobCollection[0];
     const response = await apiRequest
       .get('/api/v1/jobs')
-      .query({ page: '1', limit: '3', skills: 'node.js,react.js,mongodb' })
+      .query({ page: '1', limit: '3', skills: skills.join(',') })
       .send();
     const validated = await getAllJobsValidator(response.body.payload);
 
     expect(response.status).toBe(200);
+    expect(response.body.payload.count).toBeGreaterThan(0);
     expect(validated).toBeDefined();
   });
 

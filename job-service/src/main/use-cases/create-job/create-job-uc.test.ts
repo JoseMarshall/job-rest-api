@@ -30,7 +30,7 @@ describe(`${createJobUC.name} use-case`, () => {
   });
 
   it('should create an account', async () => {
-    const { id, ...newJob } = new JobBuilder().withAll().build();
+    const newJob = new JobBuilder().withAll().build();
     const result = await makeSutRequest(sut(uow()), newJob);
     const validated = await createJobValidator(result.payload);
 

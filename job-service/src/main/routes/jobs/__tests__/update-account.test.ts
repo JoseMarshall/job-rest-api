@@ -9,8 +9,8 @@ import {
   disconnect,
   dropDatabase,
 } from '../../../../../test-suite/utils';
-import updateJobValidator from '../../../../../test-suite/validations/schemas/http-response/job/update-job-validator';
 import { MsgBodyErrorValidator } from '../../../../../test-suite/validations/schemas/http-response/errors/custom-error';
+import updateJobValidator from '../../../../../test-suite/validations/schemas/http-response/job/update-job-validator';
 import { ApiMessages, CollectionNames } from '../../../../constants';
 import { JobModel } from '../../../external/repositories/mongodb/models';
 

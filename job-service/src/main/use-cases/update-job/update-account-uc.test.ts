@@ -7,12 +7,12 @@ import {
   dropDatabase,
   makeSutRequest,
 } from '../../../../test-suite/utils';
-import updateJobValidator from '../../../../test-suite/validations/schemas/http-response/job/update-job-validator';
 import customErrorValidator from '../../../../test-suite/validations/schemas/http-response/errors/custom-error';
+import updateJobValidator from '../../../../test-suite/validations/schemas/http-response/job/update-job-validator';
 import { CollectionNames } from '../../../constants';
 import { JobModel } from '../../external/repositories/mongodb/models';
-import { updateJobUC } from './index';
 import uow from '../../external/repositories/mongodb/unit-of-work';
+import { updateJobUC } from './index';
 
 const makeSut = async () => ({
   sut: updateJobUC,
