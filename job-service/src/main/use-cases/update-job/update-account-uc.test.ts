@@ -14,13 +14,13 @@ import { JobModel } from '../../external/repositories/mongodb/models';
 import uow from '../../external/repositories/mongodb/unit-of-work';
 import { updateJobUC } from './index';
 
-const makeSut = async () => ({
+const makeSut = () => ({
   sut: updateJobUC,
   unitOfWork: uow(),
 });
 
-describe(`${updateJobUC.name} use-case`, async () => {
-  const { sut, unitOfWork } = await makeSut();
+describe(`${updateJobUC.name} use-case`, () => {
+  const { sut, unitOfWork } = makeSut();
 
   beforeAll(async () => {
     await connect();
