@@ -7,10 +7,10 @@ import { MakeGetAllEntitiesDependencies } from '../../external/repositories/mong
 import { IUnitOfWork } from '../../external/repositories/repository.types';
 
 // eslint-disable-next-line import/prefer-default-export
-export function listJobsUC(uow: IUnitOfWork) {
+export function listJobsUC(uow: Promise<IUnitOfWork>) {
   return async (query: GetAllJobs) => {
     try {
-      const jobRepo = uow.makeJobRepository();
+      const jobRepo = (await uow).makeJobRepository();
       const jobsList = await jobRepo.getAll<MakeGetAllEntitiesDependencies<IJob>>(query, {
         formatQuery: formatQueryToRegex,
       });

@@ -4,10 +4,10 @@ import { GetOneJob } from '../../../validators/types/job';
 import { IUnitOfWork } from '../../external/repositories/repository.types';
 
 // eslint-disable-next-line import/prefer-default-export
-export function getOneJobUC(uow: IUnitOfWork) {
+export function getOneJobUC(uow: Promise<IUnitOfWork>) {
   return async (query: GetOneJob) => {
     try {
-      const jobRepo = uow.makeJobRepository();
+      const jobRepo = (await uow).makeJobRepository();
       const job = await jobRepo.get(query, {});
 
       return {

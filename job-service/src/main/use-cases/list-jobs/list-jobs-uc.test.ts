@@ -13,7 +13,7 @@ import uow from '../../external/repositories/mongodb/unit-of-work';
 
 const makeSut = async () => ({
   sut: listJobsUC,
-  unitOfWork: await uow(),
+  unitOfWork: uow(),
 });
 
 describe(`${listJobsUC.name} use-case`, async () => {

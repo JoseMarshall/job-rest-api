@@ -31,8 +31,7 @@ describe(`${createJobUC.name} use-case`, () => {
 
   it('should create an account', async () => {
     const { id, ...newJob } = new JobBuilder().withAll().build();
-    const unitOfWork = await uow();
-    const result = await makeSutRequest(sut(unitOfWork), newJob);
+    const result = await makeSutRequest(sut(uow()), newJob);
     const validated = await createJobValidator(result.payload);
 
     expect(validated).toBeDefined();

@@ -5,10 +5,10 @@ import CustomError from '../../../utils/custom-error';
 import { IUnitOfWork } from '../../external/repositories/repository.types';
 
 // eslint-disable-next-line import/prefer-default-export
-export function createJobUC(uow: IUnitOfWork) {
+export function createJobUC(uow: Promise<IUnitOfWork>) {
   return async (data: IJobInput) => {
     try {
-      const jobRepo = uow.makeJobRepository();
+      const jobRepo = (await uow).makeJobRepository();
       const createdJob = await jobRepo.add(makeJob(data));
 
       return {
