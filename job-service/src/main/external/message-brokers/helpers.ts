@@ -15,6 +15,6 @@ export async function pubMessage<T, R>({
   const connection = await messageBroker.connect();
   const channel = await (connection as any).createChannel();
   channel.assertQueue(queue, { durable: false });
-  channel.sendToQueue(queue, Buffer.from([msg] as any));
+  channel.sendToQueue(queue, Buffer.from(JSON.stringify(msg)));
   await messageBroker.disconnect();
 }

@@ -4,7 +4,7 @@ import { ISubscription } from '../../../entities/subscription/subscription.types
 import { sendNewJobOfferEmail } from '../../external/email';
 import { MakeGetAllEntitiesDependencies } from '../../external/repositories/mongodb/mongoose.types';
 import { IUnitOfWork } from '../../external/repositories/repository.types';
-import { Message } from '..';
+import { Message } from '../message-consumer.types';
 
 interface EmailConfirmationDependencies {
   uow: Promise<IUnitOfWork>;
@@ -21,7 +21,7 @@ export function notifyNewJobOfferUC({ uow }: EmailConfirmationDependencies) {
 
     do {
       subscriptions = await subscriptionRepo.getAll<MakeGetAllEntitiesDependencies<ISubscription>>(
-        { page, limit },
+        { page, limit, verified: true },
         {
           projection: { email: 1, id: 1, name: 1 },
         }

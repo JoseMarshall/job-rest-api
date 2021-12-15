@@ -25,6 +25,7 @@
 	"dependencies": {
 		"amqplib": "^0.8.0",
 		"dotenv": "^8.6.0",
+		"googleapis": "^92.0.0",
 		"handlebars": "^4.7.7",
 		"joi": "^17.4.1",
 		"mongoose": "^5.13.7",

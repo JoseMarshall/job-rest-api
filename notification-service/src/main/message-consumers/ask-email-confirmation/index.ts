@@ -1,5 +1,5 @@
 import { sendConfirmSubscriptionEmail } from '../../external/email';
-import { Message } from '..';
+import { Message } from '../message-consumer.types';
 
 interface Subscription {
   id: string;

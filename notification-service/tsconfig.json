@@ -25,5 +25,5 @@
     "**/*.spec.ts",
     "jest*"
   ],
-  "include": ["**/*.ts", "**/*.js"]
+  "include": ["**/*.ts", "**/*.js", "**/*.json"]
 }

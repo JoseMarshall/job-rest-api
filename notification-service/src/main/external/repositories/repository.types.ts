@@ -8,6 +8,7 @@ export interface GetAllEntitiesData<T> {
 export type QueryGetAll = {
   page: number;
   limit?: number;
+  [x: string]: string | number | boolean;
 };
 
 export interface IRepository<T> {
