@@ -4,7 +4,7 @@ WORKDIR /usr/src/job-service
 
 COPY package*.json ./
 COPY tsconfig.json ./
-RUN npm install --production
+RUN npm install
 EXPOSE 4000
 
 COPY src ./src

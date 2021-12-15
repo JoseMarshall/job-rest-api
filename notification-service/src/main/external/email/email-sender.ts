@@ -8,9 +8,7 @@ export async function sendConfirmSubscriptionEmail({
   subscriptionId,
 }: ConfirmSubscriptionEmail) {
   const context = {
-    verifySubscription: `${
-      process.env.SUBSCRIPTION_SERVICE_URL ?? ''
-    }/subscritpions/${subscriptionId}/verify`,
+    verifySubscription: `${process.env.URL_ROOT ?? ''}/subscriptions/${subscriptionId}/verify`,
     name,
   };
 
@@ -20,10 +18,8 @@ export async function sendConfirmSubscriptionEmail({
 
 export async function sendNewJobOfferEmail({ to, job, subscriptionId, name }: JobOfferEmail) {
   const context = {
-    linkToJob: `${process.env.JOB_SERVICE_URL ?? ''}/jobs/${job.id}`,
-    cancelSubscription: `${
-      process.env.SUBSCRIPTION_SERVICE_URL ?? ''
-    }/subscritpions/${subscriptionId}/cancel`,
+    linkToJob: `${process.env.URL_ROOT ?? ''}/jobs/${job.id}`,
+    cancelSubscription: `${process.env.URL_ROOT ?? ''}/subscriptions/${subscriptionId}/cancel`,
     name,
     ...job,
   };

@@ -16,14 +16,6 @@
     "rootDir": ".",
     "outDir": "built"
   },
-  "exclude": [
-    "node_modules",
-    "test-suite",
-    ".husky",
-    ".vscode",
-    "**/*.test.ts",
-    "**/*.spec.ts",
-    "jest*"
-  ],
+  "exclude": ["node_modules", "test-suite", ".vscode", "**/*.test.ts", "**/*.spec.ts", "jest*"],
   "include": ["**/*.ts", "**/*.js", "**/*.json"]
 }

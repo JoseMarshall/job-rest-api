@@ -29,9 +29,11 @@ const start = async ({ dbHelper, messageBroker, consumers }: AppDependencies) =>
 
     logger.info(`Notification Service running`);
 
-    await Promise.all(
-      consumers.flatMap(({ fn, queue }) => [consumeMessage({ cb: fn, queue, messageBroker })])
-    );
+    setTimeout(async () => {
+      await Promise.all(
+        consumers.flatMap(({ fn, queue }) => [consumeMessage({ cb: fn, queue, messageBroker })])
+      );
+    }, 10000);
   } catch (error) {
     logger.error(error);
   }

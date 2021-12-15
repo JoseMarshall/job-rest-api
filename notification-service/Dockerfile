@@ -4,7 +4,8 @@ WORKDIR /usr/src/notification-service
 
 COPY package*.json ./
 COPY tsconfig.json ./
-RUN npm install --production
+COPY job-rest-api-key.json ./
+RUN npm install
 EXPOSE 4000
 
 COPY src ./src
