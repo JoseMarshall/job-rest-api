@@ -1,9 +1,6 @@
 import { Tags } from './enums';
 import { createSubscription, verifySubscription, deleteSubscription } from './paths/subscription';
-import {
-  createSubscriptionRequestBodySchema,
-  verifySubscriptionRequestBodySchema,
-} from './schemas/request-body';
+import { createSubscriptionRequestBodySchema } from './schemas/request-body';
 import {
   createSubscriptionResponseBodySchema,
   deleteSubscriptionResponseBodySchema,
@@ -27,13 +24,13 @@ export default {
 
   paths: {
     '/api/v1/subscriptions': createSubscription,
-    '/api/v1/subscriptions/{id}': { ...verifySubscription, ...deleteSubscription },
+    '/api/v1/subscriptions/{id}/verify': verifySubscription,
+    '/api/v1/subscriptions/{id}/cancel': deleteSubscription,
   },
 
   schemas: {
     requestBody: {
       createSubscription: createSubscriptionRequestBodySchema,
-      verifySubscription: verifySubscriptionRequestBodySchema,
     },
     responseBody: {
       createSubscription: createSubscriptionResponseBodySchema,

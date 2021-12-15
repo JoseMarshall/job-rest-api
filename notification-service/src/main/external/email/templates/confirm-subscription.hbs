@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Link de recuperação de senha - MetCare</title>
+    <style>
+        #metcare-image {
+            margin-top: 50px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
+        .contact-and-img {
+            margin-top: 50px;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            font-family: Arial
+        }
+    </style>
+</head>
+
+<body>
+    <p id="cabecalho">Em alguns passos básicos poderá recuperar o acesso à sua conta.</p>
+
+    <p>
+        Caro(a) <b>{{name}}</b>,<br></br>
+        Você recebeu este email porque solicitou (ou alguém) a recuperação da palavra-passe da sua
+        conta. Por favor clique no link abaixo, ou cole-o no seu navegador para efectuar a recuperação
+        da sua palavra-passe, Se não solicitou a recuperação da palavra-passe, por favor ignore este
+        email, e a sua palavra-passe vai permanecer intacta
+    </p>
+
+    <a href="{{link}}"><b>Recuperar minha palavra-passe</b></a>
+    <br />
+    <div class="contact-and-img">
+        <div>
+            <p>
+                Met Care | Comunicado T +244 923 380 707 |
+                <a href="mailto:geral@met-care.com">geral@met-care.com</a>
+            </p>
+            Este é um email gerado automaticamente por favor não responda
+            <a href="https://www.met-care.com/met-alerta"> met-alerta </a>
+        </div>
+        <div id="metcare-image">
+            <img src="cid:{{cid}}" alt="Met Care" width="800" height="200" />
+        </div>
+    </div>
+
+    <footer>
+        <span style="font-size: 7pt">Antes de imprimir esta mensagem, pense no meio ambiente. Esta mensagem e-mail,
+            assim como os ficheiros eventualmente anexos, é reservada aos seus
+            destinatários e pode conter informação confidencial ou estar sujeita a restrições legais. Se
+            não é o seu destinatário ou se recebeu esta mensagem por motivo de erro, solicitamos que não
+            faça qualquer uso ou divulgação do seu conteúdo e proceda à eliminação permanente desta
+            mensagem e respectivos anexos.
+            <br />
+        </span>
+    </footer>
+</body>
+
+</html>

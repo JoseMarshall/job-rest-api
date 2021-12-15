@@ -5,7 +5,7 @@ import { Tags } from '../../enums';
 
 // eslint-disable-next-line import/prefer-default-export
 export const deleteSubscription = {
-  delete: {
+  get: {
     tags: [Tags.Subscription],
     summary: 'end-point to delete a subscription',
     parameters: [

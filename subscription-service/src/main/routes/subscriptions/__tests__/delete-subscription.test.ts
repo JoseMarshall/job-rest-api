@@ -25,13 +25,15 @@ describe(`Method DELETE /api/v1/subscriptions/:id should delete a subscription`,
 
   it('should return a 200 code response and a message', async () => {
     const subscription = collections.subscriptions[0];
-    const response = await apiRequest.delete(`/api/v1/subscriptions/${subscription.id}`).send();
+    const response = await apiRequest.get(`/api/v1/subscriptions/${subscription.id}/cancel`).send();
     expect(response.status).toBe(200);
     expect(response.body.msg).toContain(ApiMessages.DeletedSuccessfully);
   });
 
   it('should return a 404 code response due to not found subscription', async () => {
-    const response = await apiRequest.delete(`/api/v1/subscriptions/${faker.datatype.uuid()}`).send();
+    const response = await apiRequest
+      .get(`/api/v1/subscriptions/${faker.datatype.uuid()}/cancel`)
+      .send();
     const validated = await MsgBodyErrorValidator(response.body);
 
     expect(response.status).toBe(404);

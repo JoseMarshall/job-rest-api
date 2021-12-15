@@ -1,16 +1,12 @@
 import { ApiErrorsName, ApiErrorsType, ApiMessages } from '../../../../constants';
-import {
-  getRequestBodySchemaRef,
-  getResponseBodySchemaRef,
-  makePathParamSchema,
-} from '../../builders';
+import { getResponseBodySchemaRef, makePathParamSchema } from '../../builders';
 import { customError } from '../../components';
 import { Tags } from '../../enums';
 import { customErrorSchema } from '../../schemas/errors';
 
 // eslint-disable-next-line import/prefer-default-export
 export const verifySubscription = {
-  patch: {
+  get: {
     tags: [Tags.Subscription],
     summary: 'end-point to verify a subscription',
     parameters: [
@@ -22,13 +18,6 @@ export const verifySubscription = {
         required: false,
       }),
     ],
-    requestBody: {
-      content: {
-        'application/json': {
-          schema: getRequestBodySchemaRef('verifySubscription'),
-        },
-      },
-    },
     responses: {
       200: {
         description: ApiMessages.UpdatedSuccessfully,

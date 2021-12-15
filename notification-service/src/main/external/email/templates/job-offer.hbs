@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Password recovery link - MetCare</title>
+    <style>
+        #metcare-image {
+            margin-top: 50px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
+        .contact-and-img {
+            margin-top: 50px;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            font-family: Arial
+        }
+    </style>
+</head>
+
+<body>
+    <p id="cabecalho">In a few basic steps you will be able to regain access to your account.</p>
+
+    <p>
+        Dear <b>{{name}}</b>,<br></br>
+        You received this email because you requested (or someone else) to retrieve the password for your
+        account. Please click on the link below, or paste it in your browser to perform the recovery
+        of your password, If you have not requested password recovery, please ignore this
+        email, and your password will remain intact
+    </p>
+
+    <a href="{{link}}"><b>Recover my password</b></a>
+    <br />
+    <div class="contact-and-img">
+        <div>
+            <p>
+                Met Care | Announcement T +244 923 380 707 |
+                <a href="mailto:geral@met-care.com">geral@met-care.com</a>
+            </p>
+            This is an automatically generated email please do not reply
+            <a href="https://www.met-care.com/met-alerta"> met-alerta </a>
+        </div>
+        <div id="metcare-image">
+            <img src="cid:{{cid}}" alt="Met Care" width="800" height="200" />
+        </div>
+    </div>
+
+    <footer>
+        <span style="font-size: 7pt">Before printing this message, think about the environment. This email message,
+            as well as any files that may be attached, is reserved for your
+            recipients and may contain confidential information or be subject to legal restrictions. If
+            is not your recipient or if you received this message due to an error, we ask that you do not
+            make any use or dissemination of its content and proceed to the permanent elimination of this
+            message and its attachments.
+            <br />
+        </span>
+    </footer>
+</body>
+
+</html>
