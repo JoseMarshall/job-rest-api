@@ -1,4 +1,5 @@
 import SubscriptionBuilder from '../../../../../test-suite/builders/subscription/subscription-builder';
+import collections from '../../../../../test-suite/entities-collections';
 import {
   apiRequest,
   collectionInit,
@@ -8,7 +9,6 @@ import {
 } from '../../../../../test-suite/utils';
 import { MsgBodyErrorValidator } from '../../../../../test-suite/validations/schemas/http-response/errors/custom-error';
 import createSubscriptionValidator from '../../../../../test-suite/validations/schemas/http-response/subscription/create-subscription-validator';
-import collections from '../../../../../test-suite/entities-collections';
 import { ApiMessages, CollectionNames } from '../../../../constants';
 import { SubscriptionModel } from '../../../external/repositories/mongodb/models';
 

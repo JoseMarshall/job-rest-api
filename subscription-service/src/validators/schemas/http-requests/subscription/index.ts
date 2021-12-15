@@ -1,7 +1,7 @@
 import { HttpRequest } from '../../../../main/adapters/adapters.types';
 import subscribeSchemaValidator from './subscribe-schema';
-import verifySchemaValidator from './verify-schema';
 import unsubscribeJobSchemaValidator from './unsubscribe-schema';
+import verifySchemaValidator from './verify-schema';
 
 export const makeSubscribeValidator = () => async (req: HttpRequest) =>
   subscribeSchemaValidator(req.body);

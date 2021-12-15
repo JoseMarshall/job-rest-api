@@ -1,4 +1,4 @@
-import { makeMsgBodySchema, makeBooleanSchema } from '../../../builders';
+import { makeBooleanSchema, makeMsgBodySchema } from '../../../builders';
 
 // eslint-disable-next-line import/prefer-default-export
 export const deleteSubscriptionResponseBodySchema = makeMsgBodySchema({

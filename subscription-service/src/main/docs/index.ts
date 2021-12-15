@@ -1,5 +1,5 @@
 import { Tags } from './enums';
-import { createSubscription, verifySubscription, deleteSubscription } from './paths/subscription';
+import { createSubscription, deleteSubscription, verifySubscription } from './paths/subscription';
 import { createSubscriptionRequestBodySchema } from './schemas/request-body';
 import {
   createSubscriptionResponseBodySchema,

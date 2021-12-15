@@ -25,7 +25,7 @@ export function makeGetAllEntities<D extends Document, K>({
             $facet: {
               data: [
                 {
-                  $match: formattedQuery,
+                  $match: { isDeleted: false, formattedQuery },
                 },
                 ...(sort ? [{ $sort: makeSortQuery(sort) }] : []),
                 { $skip: skip },
@@ -39,7 +39,7 @@ export function makeGetAllEntities<D extends Document, K>({
               ],
               count: [
                 {
-                  $match: formattedQuery,
+                  $match: { isDeleted: false, formattedQuery },
                 },
                 { $count: 'total' },
               ],

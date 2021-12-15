@@ -19,7 +19,7 @@ export const updateJob = {
         type: 'string',
         description: 'The unique identifier of this job in database',
         example: 'f37226ad-f294-49b6-ac6d-5fd18995220a',
-        required: false,
+        required: true,
       }),
     ],
     requestBody: {

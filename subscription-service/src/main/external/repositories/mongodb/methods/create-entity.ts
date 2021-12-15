@@ -1,10 +1,10 @@
 import { Document } from 'mongoose';
-import CustomError from '../../../../../utils/custom-error';
 
+import { ApiErrorsName, ApiErrorsType, ApiMessages } from '../../../../../constants';
 import { Entity } from '../../../../../entities/entity.types';
+import CustomError from '../../../../../utils/custom-error';
 import { queryGuard } from '../helpers';
 import { MakeCreateEntityData } from '../mongoose.types';
-import { ApiErrorsName, ApiErrorsType, ApiMessages } from '../../../../../constants';
 
 // eslint-disable-next-line import/prefer-default-export
 export function makeCreateEntity<D extends Document, K extends Entity>({
