@@ -27,17 +27,17 @@ describe(makeCreateEntity.name, () => {
   });
 
   it('should create an entity in mongodb repository', async () => {
-    const newAccount = new JobBuilder().withAll().withId().build();
-    const result = await makeSutRequest(sut({ model }), newAccount);
+    const newJob = new JobBuilder().withAll().withId().build();
+    const result = await makeSutRequest(sut({ model }), newJob);
     const validated = await createJobValidator(result);
 
     expect(validated).toBeDefined();
   });
 
   it('should get an error due to missing required fields', async () => {
-    const newAccount = new JobBuilder().withTitle().build();
+    const newJob = new JobBuilder().withTitle().build();
     try {
-      await makeSutRequest(sut({ model }), newAccount);
+      await makeSutRequest(sut({ model }), newJob);
       fail('Should not reach here');
     } catch (error) {
       expect(true);

@@ -40,7 +40,7 @@ describe(`${createJobUC.name} use-case`, () => {
     await disconnect();
   });
 
-  it('should create an account', async () => {
+  it('should create a job', async () => {
     const newJob = new JobBuilder().withAll().build();
     const result = await makeSutRequest(sut({ uow: uow(), messageBroker }), newJob);
     const validated = await createJobValidator(result.payload);

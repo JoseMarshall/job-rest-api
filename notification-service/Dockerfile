@@ -1,6 +1,6 @@
 FROM node:14 as base
 
-WORKDIR /usr/src/job-service
+WORKDIR /usr/src/notification-service
 
 COPY package*.json ./
 COPY tsconfig.json ./

@@ -5,7 +5,7 @@ import joiValidator from '../../../index';
 import { GetAllJobs } from '../../../types/job';
 import { getAllSchema } from '../sub-schemas';
 
-const getAllAccountsSchema = joi
+const getAllJobsSchema = joi
   .object(getAllSchema)
   .append({
     title: joi.string().min(1),
@@ -20,4 +20,4 @@ const getAllAccountsSchema = joi
   .required()
   .unknown(false);
 
-export default joiValidator<GetAllJobs>(getAllAccountsSchema);
+export default joiValidator<GetAllJobs>(getAllJobsSchema);

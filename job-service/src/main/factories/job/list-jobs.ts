@@ -5,7 +5,7 @@ import makeGetAllEntitiesController from '../../controllers/get-all-entities';
 import uow from '../../external/repositories/mongodb/unit-of-work';
 import { listJobsUC } from '../../use-cases/list-jobs';
 
-const listAccounts = makeGetAllEntitiesController<IJob, GetAllJobs>({
+const listJobs = makeGetAllEntitiesController<IJob, GetAllJobs>({
   findAll: listJobsUC(uow()),
   requestValidator: makeGetAllJobsValidator(),
   queryFormatter: (query: GetAllJobs) => {
@@ -37,4 +37,4 @@ const listAccounts = makeGetAllEntitiesController<IJob, GetAllJobs>({
   },
 });
 
-export default listAccounts;
+export default listJobs;
