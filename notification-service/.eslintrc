@@ -1,0 +1,52 @@
+{
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".ts"],
+        "moduleDirectory": ["node_modules"]
+      }
+    }
+  },
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "airbnb",
+    "prettier",
+    "plugin:import/typescript",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "env": {
+    "es6": true,
+    "jest": true,
+    "node": true },
+  "plugins": [
+    "node",
+    "flowtype",
+    "prettier",
+    "simple-import-sort",
+    "import"
+  ],
+  "rules": {
+    "arrow-parens": "off",
+    "import/extensions": "off",
+    "semi": 0,
+    "prettier/prettier": [
+      "error", {
+        "semi": true,
+        "endOfLine": "auto"
+      }
+    ],
+    "simple-import-sort/imports": "error",
+    "sort-imports": "off",
+    "import/first": "error",
+    "import/newline-after-import": "error",
+    "import/no-duplicates": "error",
+    "no-param-reassign": "error",
+    "no-shadow": "off",
+    "no-unused-vars": "off",
+    "no-else-return": "warn",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off"
+  }
+}

@@ -1,0 +1,74 @@
+version: '3.8'
+services:
+ 
+  jobs:
+    container_name: jobs-service
+    restart: unless-stopped
+    build: './job-service'
+    ports:
+      - "4000:4000"
+    command: npm start
+    depends_on: 
+      - db
+      - rabbitmq
+    environment:
+      - MONGO_URL=mongodb://db:27017/job-offers
+      - RABBIT_MQ_URL=amqp://rabbitmq
+
+  subscriptions:
+    container_name: subscriptions-service
+    restart: unless-stopped
+    build: './subscription-service'
+    ports:
+      - "4001:4000"
+    command: npm start
+    depends_on: 
+      - db
+      - rabbitmq
+    environment:
+      - MONGO_URL=mongodb://db:27017/job-offers
+      - RABBIT_MQ_URL=amqp://rabbitmq
+
+  notifications:
+    container_name: notifications-service
+    restart: unless-stopped
+    build: './notification-service'
+    depends_on: 
+      - db
+      - rabbitmq
+    command: npm start
+    environment:
+      - MONGO_URL=mongodb://db:27017/job-offers
+      - RABBIT_MQ_URL=amqp://rabbitmq
+      - EMAIL_ADDRESS=job.search.taikai@gmail.com
+      - URL_ROOT=http://localhost:8080/api/v1
+  
+  db:
+    image: mongo:5.0.2
+    container_name: mongo-database
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb:/data/db
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq-server
+    restart: unless-stopped
+    ports:
+      - "15672:15672"
+
+  nginx:
+    build:
+      dockerfile: Dockerfile.nginx
+      context: ./
+    container_name: nginx-proxy-server
+    ports:
+      - "8080:8080"
+    depends_on:
+      - jobs
+      - subscriptions
+
+volumes:
+  mongodb:
