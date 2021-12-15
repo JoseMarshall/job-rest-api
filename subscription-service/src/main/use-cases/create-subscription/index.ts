@@ -4,9 +4,8 @@ import { ApiErrorsName, ApiErrorsType, ApiMessages, RabbitMQ } from '../../../co
 import { makeSubscription } from '../../../entities/subscription';
 import { ISubscriptionInput } from '../../../entities/subscription/subscription.types';
 import CustomError from '../../../utils/custom-error';
-import { MessageBroker } from '../../external/message-brokers/message-broker.types';
 import { pubMessage } from '../../external/message-brokers/helpers';
-
+import { MessageBroker } from '../../external/message-brokers/message-broker.types';
 import { IUnitOfWork } from '../../external/repositories/repository.types';
 
 interface CreateSubscriptionDependencies {
@@ -23,7 +22,11 @@ export function createSubscriptionUC({ uow, messageBroker }: CreateSubscriptionD
 
       await pubMessage<Connection, Channel>({
         messageBroker,
-        msg: createdSubscription,
+        msg: {
+          id: createdSubscription.id,
+          name: createdSubscription.name,
+          email: createdSubscription.email,
+        },
         queue: RabbitMQ.Subscriptions,
       });
 

@@ -13,7 +13,7 @@ import verifySubscriptionValidator from '../../../../../test-suite/validations/s
 import { ApiMessages, CollectionNames } from '../../../../constants';
 import { SubscriptionModel } from '../../../external/repositories/mongodb/models';
 
-describe(`Method PATCH /api/v1/subscriptions/:id should verify a subscription`, () => {
+describe(`Method GET /api/v1/subscriptions/:id should verify a subscription`, () => {
   beforeAll(async () => {
     await connect();
     await collectionInit(SubscriptionModel, CollectionNames.Subscriptions);
@@ -26,7 +26,7 @@ describe(`Method PATCH /api/v1/subscriptions/:id should verify a subscription`, 
 
   it('should return a 200 code response', async () => {
     const { id } = collections.subscriptions[0];
-    const response = await apiRequest.patch(`/api/v1/subscriptions/${id}`).send({});
+    const response = await apiRequest.get(`/api/v1/subscriptions/${id}/verify`).send();
     const validated = await verifySubscriptionValidator(response.body.payload);
 
     expect(response.status).toBe(200);
@@ -36,8 +36,8 @@ describe(`Method PATCH /api/v1/subscriptions/:id should verify a subscription`, 
 
   it('should return a 422 code response due to subscription not found', async () => {
     const response = await apiRequest
-      .patch(`/api/v1/subscriptions/${faker.datatype.uuid()}`)
-      .send({});
+      .get(`/api/v1/subscriptions/${faker.datatype.uuid()}/verify`)
+      .send();
 
     const validated = await MsgBodyErrorValidator(response.body);
     expect(response.status).toBe(422);

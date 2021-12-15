@@ -7,8 +7,8 @@ import verifySubscription from '../../factories/subscription/verify-subscription
 
 const router = Router();
 
+router.get('/:id/cancel', adaptExpressRoute(deleteSubscription));
+router.get('/:id/verify', adaptExpressRoute(verifySubscription));
 router.post('/', adaptExpressRoute(createSubscription));
-router.patch('/:id', adaptExpressRoute(verifySubscription));
-router.delete('/:id', adaptExpressRoute(deleteSubscription));
 
 export default router;
