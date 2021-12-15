@@ -15,7 +15,7 @@ export const verifySubscription = {
         type: 'string',
         description: 'The unique identifier of this subscription in database',
         example: 'f37226ad-f294-49b6-ac6d-5fd18995220a',
-        required: false,
+        required: true,
       }),
     ],
     responses: {
