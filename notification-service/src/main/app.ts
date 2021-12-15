@@ -7,7 +7,8 @@ import { MessageBroker } from './external/message-brokers/message-broker.types';
 import RabbitMQ from './external/message-brokers/rabbit-mq';
 import { MongoHelper } from './external/repositories/mongodb/helpers/mongo-helper';
 import { DatabaseHelper } from './external/repositories/repository.types';
-import consumers, { Consumer } from './message-consumers';
+import consumers from './message-consumers';
+import { Consumer } from './message-consumers/message-consumer.types';
 
 interface AppDependencies {
   dbHelper: DatabaseHelper;

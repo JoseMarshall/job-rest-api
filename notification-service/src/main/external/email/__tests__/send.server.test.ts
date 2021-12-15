@@ -3,7 +3,12 @@ import send from '../send';
 
 jest.mock('../config', () => ({
   ...jest.requireActual<Record<string, unknown>>('../config'),
-  makeTransporter: jest.fn().mockResolvedValue({ sendMail: jest.fn(x => x) }),
+  makeTransporter: jest.fn().mockResolvedValue({ sendMail: jest.fn(async x => x) }),
+}));
+
+jest.mock('../../../../utils/logger', () => ({
+  ...jest.requireActual<Record<string, unknown>>('../../../../utils/logger'),
+  logger: { info: jest.fn(), error: jest.fn() },
 }));
 
 const makeSut = () => ({
@@ -21,10 +26,10 @@ describe('send an email to a given address', () => {
       subject: 'test',
       attachments: [],
     };
-    const mockedSendMailReturn = await sut(options);
+    await sut(options);
     const transporter = await makeTransporter();
 
     expect(transporter.sendMail).toHaveBeenCalledTimes(1);
-    expect(mockedSendMailReturn).toEqual(options);
+    expect(transporter.sendMail).toHaveBeenCalledWith(options);
   });
 });
