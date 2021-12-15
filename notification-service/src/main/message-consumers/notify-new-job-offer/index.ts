@@ -23,13 +23,18 @@ export function notifyNewJobOfferUC({ uow }: EmailConfirmationDependencies) {
       subscriptions = await subscriptionRepo.getAll<MakeGetAllEntitiesDependencies<ISubscription>>(
         { page, limit },
         {
-          projection: { email: 1, id: 1 },
+          projection: { email: 1, id: 1, name: 1 },
         }
       );
 
       await Promise.all(
         subscriptions.data.flatMap(subscription => [
-          sendNewJobOfferEmail({ to: subscription.email, job, subscriptionId: subscription.id }),
+          sendNewJobOfferEmail({
+            to: subscription.email,
+            job,
+            subscriptionId: subscription.id,
+            name: subscription.name,
+          }),
         ])
       );
 

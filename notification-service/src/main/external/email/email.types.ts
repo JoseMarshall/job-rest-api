@@ -14,4 +14,5 @@ export interface JobOfferEmail {
   to: string | string[];
   job: IJob;
   subscriptionId: string;
+  name: string;
 }

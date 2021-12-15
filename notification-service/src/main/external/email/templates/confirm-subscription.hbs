@@ -1,70 +1,222 @@
 <!DOCTYPE html>
-<html lang="pt-pt">
-
-<head>
+<html lang="en">
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Link de recuperação de senha - MetCare</title>
+    <title>Confirm Your Email Subscription</title>
     <style>
-        #metcare-image {
-            margin-top: 50px;
-            margin-bottom: 10px;
-        }
+      p {
+        text-align: justify;
+        text-justify: inter-word;
+      }
 
-        p {
-            text-align: justify;
-            text-justify: inter-word;
-        }
-
-        .contact-and-img {
-            margin-top: 50px;
-            margin-bottom: 10px;
-        }
-
-        footer {
-            font-family: Arial
-        }
+      footer {
+        font-family: Arial;
+      }
     </style>
-</head>
+  </head>
 
-<body>
-    <p id="cabecalho">Em alguns passos básicos poderá recuperar o acesso à sua conta.</p>
-
-    <p>
-        Caro(a) <b>{{name}}</b>,<br></br>
-        Você recebeu este email porque solicitou (ou alguém) a recuperação da palavra-passe da sua
-        conta. Por favor clique no link abaixo, ou cole-o no seu navegador para efectuar a recuperação
-        da sua palavra-passe, Se não solicitou a recuperação da palavra-passe, por favor ignore este
-        email, e a sua palavra-passe vai permanecer intacta
-    </p>
-
-    <a href="{{link}}"><b>Recuperar minha palavra-passe</b></a>
-    <br />
-    <div class="contact-and-img">
-        <div>
-            <p>
-                Met Care | Comunicado T +244 923 380 707 |
-                <a href="mailto:geral@met-care.com">geral@met-care.com</a>
-            </p>
-            Este é um email gerado automaticamente por favor não responda
-            <a href="https://www.met-care.com/met-alerta"> met-alerta </a>
-        </div>
-        <div id="metcare-image">
-            <img src="cid:{{cid}}" alt="Met Care" width="800" height="200" />
-        </div>
+  <body>
+    <div style="width: 100% !important; margin: 0; padding: 0">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#f0f0f0">
+        <tbody>
+          <tr>
+            <td valign="top" align="center">
+              <table width="690" cellpadding="0" cellspacing="0" border="0">
+                <tbody>
+                  <tr>
+                    <td colspan="3" height="30" style="height: 70px">
+                      <div
+                        style="
+                          font-size: 12px;
+                          font-family: Helvetica, Arial, sans-serif;
+                          text-align: center;
+                          color: #aaaaaa;
+                        "
+                      >
+                        Confirm your email address
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width="30"><div style="font-size: 1px; line-height: 1px">&nbsp;</div></td>
+                    <td width="630" valign="top" bgcolor="#ffffff">
+                      <table
+                        width="100%"
+                        cellpadding="0"
+                        cellspacing="0"
+                        border="0"
+                        bgcolor="#ffffff"
+                      >
+                        <tbody>
+                          <tr>
+                            <td colspan="3" height="20">
+                              <div style="font-size: 1px; line-height: 1px">&nbsp;</div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td width="30">
+                              <div style="font-size: 1px; line-height: 1px">&nbsp;</div>
+                            </td>
+                            <td width="570" valign="top">
+                              <table
+                                width="100%"
+                                cellpadding="0"
+                                cellspacing="0"
+                                border="0"
+                                bgcolor="#ffffff"
+                              >
+                                <tbody>
+                                  <tr>
+                                    <td colspan="5" height="10"></td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="5">
+                                      <table
+                                        width="100%"
+                                        cellpadding="0"
+                                        cellspacing="0"
+                                        border="0"
+                                        bgcolor="#222c37"
+                                      >
+                                        <tbody>
+                                          <tr>
+                                            <td width="15">
+                                              <div style="font-size: 1px; line-height: 1px">
+                                                &nbsp;
+                                              </div>
+                                            </td>
+                                            <td height="54" align="right"></td>
+                                            <td width="10">
+                                              <div style="font-size: 1px; line-height: 1px">
+                                                &nbsp;
+                                              </div>
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td height="20" colspan="5"></td>
+                                  </tr>
+                                  <tr>
+                                    <td valign="top" align="left" colspan="5">
+                                      <div
+                                        style="
+                                          font-family: Helvetica, Arial, sans-serif;
+                                          font-size: 28px;
+                                          color: #222c37;
+                                          font-weight: bold;
+                                          letter-spacing: -1px;
+                                        "
+                                      >
+                                        Dear {{name}},
+                                      </div>
+                                      <div style="font-size: 20px; line-height: 20px">&nbsp;</div>
+                                      <p
+                                        style="
+                                          font-family: Helvetica, Arial, sans-serif;
+                                          font-size: 15px;
+                                          color: #455463;
+                                          line-height: 20px;
+                                          margin: 0 0 1em 0;
+                                        "
+                                      >
+                                        Thank you for subscribing to our jobs platform
+                                      </p>
+                                      <p
+                                        style="
+                                          font-family: Helvetica, Arial, sans-serif;
+                                          font-size: 15px;
+                                          color: #455463;
+                                          line-height: 20px;
+                                          margin: 0 0 1em 0;
+                                        "
+                                      >
+                                        Click the below link to confirm your email.
+                                      </p>
+                                      <a
+                                        href="{{verifySubscription}}"
+                                        style="color: #ff0066; text-decoration: underline"
+                                        title=""
+                                        target="_blank"
+                                        ><span style="color: #ff0066; font-size: 15px"
+                                          >Link to confirm email</span
+                                        ></a
+                                      >
+                                      <div style="font-size: 20px; line-height: 20px">&nbsp;</div>
+                                      <div style="font-size: 20px; line-height: 20px">&nbsp;</div>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td valign="top" align="left" colspan="5">
+                                      <p
+                                        style="
+                                          font-family: Helvetica, Arial, sans-serif;
+                                          font-size: 15px;
+                                          color: #455463;
+                                          line-height: 20px;
+                                        "
+                                      >
+                                        Sincerely,<br /><strong style="color: #222c37"
+                                          >The Job Search Team</strong
+                                        >
+                                      </p>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td height="10" colspan="5"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="5" bgcolor="#222c37" colspan="5"></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                            <td width="30">
+                              <div style="font-size: 1px; line-height: 1px">&nbsp;</div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td colspan="3" height="30">
+                              <div style="font-size: 1px; line-height: 1px">&nbsp;</div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                    <td width="30">
+                      <div style="font-family: Helvetica, Arial, sans-serif; font-size: 12px">
+                        &nbsp;
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="3" height="30">
+                      <div style="font-size: 1px; line-height: 1px">&nbsp;</div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="yj6qo"></div>
+      <div class="adL"></div>
     </div>
 
     <footer>
-        <span style="font-size: 7pt">Antes de imprimir esta mensagem, pense no meio ambiente. Esta mensagem e-mail,
-            assim como os ficheiros eventualmente anexos, é reservada aos seus
-            destinatários e pode conter informação confidencial ou estar sujeita a restrições legais. Se
-            não é o seu destinatário ou se recebeu esta mensagem por motivo de erro, solicitamos que não
-            faça qualquer uso ou divulgação do seu conteúdo e proceda à eliminação permanente desta
-            mensagem e respectivos anexos.
-            <br />
-        </span>
+      <span style="font-size: 7pt"
+        >Before printing this message, think about the environment. This email message, as well as
+        any files that may be attached, is reserved for your recipients and may contain confidential
+        information or be subject to legal restrictions. If is not your recipient or if you received
+        this message due to an error, we ask that you do not make any use or dissemination of its
+        content and proceed to the permanent elimination of this message and its attachments.
+        <br />
+      </span>
     </footer>
-</body>
-
+  </body>
 </html>

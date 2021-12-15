@@ -12,22 +12,22 @@ export async function sendConfirmSubscriptionEmail({
       process.env.SUBSCRIPTION_SERVICE_URL ?? ''
     }/subscritpions/${subscriptionId}/verify`,
     name,
-    subscriptionId,
   };
 
   const html = await loadTemplate(`confirm-subscription.hbs`, context);
-  return send({ to, html, subject: 'Email Confirmation' });
+  return send({ to, html, subject: 'Comfirm your email subscription' });
 }
 
-export async function sendNewJobOfferEmail({ to, job, subscriptionId }: JobOfferEmail) {
+export async function sendNewJobOfferEmail({ to, job, subscriptionId, name }: JobOfferEmail) {
   const context = {
     linkToJob: `${process.env.JOB_SERVICE_URL ?? ''}/jobs/${job.id}`,
     cancelSubscription: `${
       process.env.SUBSCRIPTION_SERVICE_URL ?? ''
     }/subscritpions/${subscriptionId}/cancel`,
+    name,
     ...job,
   };
 
   const html = await loadTemplate(`job-offer.hbs`, context);
-  return send({ to, html, subject: 'New Job offer' });
+  return send({ to, html, subject: 'New job offer' });
 }
