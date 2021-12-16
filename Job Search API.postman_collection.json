@@ -1,0 +1,913 @@
+{
+	"info": {
+		"_postman_id": "89be846e-37b4-49ea-8281-e218bed3a335",
+		"name": "Job Search API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Jobs",
+			"item": [
+				{
+					"name": "List Jobs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/jobs?page=1&limit=10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"jobs"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List Jobs",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/jobs?page=1&limit=10",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"jobs"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.21.4"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 15 Dec 2021 20:06:53 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "4841"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"12e9-cmNJayMQFge9GWSQWhrUPg+MpL8\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"Entities found, check the result on payload\",\n    \"payload\": {\n        \"data\": [\n            {\n                \"isDeleted\": false,\n                \"skills\": [\n                    \"nodejs\",\n                    \"react\",\n                    \"nextjs\"\n                ],\n                \"responsabilities\": [\n                    \"Develop new functionality and features\",\n                    \"Think about architecture and infrastructure solutions\",\n                    \"Implement design and front-end changes\"\n                ],\n                \"id\": \"95b7bb88-57b6-4963-8bbf-dd0a04c66708\",\n                \"title\": \"Backend Developer\",\n                \"description\": \"We’re now looking for a Developer (can be remote or onsite) to work with us, as an architect and builder, developing and maintaining our online shop and community. You’ll be a builder and fundamental team member, with a voice on the course of the company, not just another cog in a machine\",\n                \"companyMarket\": \"Software House\",\n                \"companyName\": \"TAIKAI\",\n                \"type\": \"Full Time\",\n                \"location\": {\n                    \"planet\": \"Earth\",\n                    \"country\": \"Portugal\",\n                    \"city\": \"Porto\"\n                },\n                \"companyWebsite\": \"https://taikai.network\",\n                \"announcedBy\": {\n                    \"name\": \"John Doe\",\n                    \"role\": \"HR - Tech Recruiter\",\n                    \"email\": \"john.doe@taikai.com\"\n                },\n                \"createdAt\": \"2021-12-15T12:59:15.505Z\",\n                \"updatedAt\": \"2021-12-15T12:59:15.505Z\"\n            },\n            {\n                \"isDeleted\": false,\n                \"skills\": [\n                    \"mongo\",\n                    \"sql\",\n                    \"nextjs\"\n                ],\n                \"responsabilities\": [\n                    \"Develop new functionality and features\",\n                    \"Think about architecture and infrastructure solutions\",\n                    \"Implement design and front-end changes\"\n                ],\n                \"id\": \"3cd6e982-3ff3-433b-9db8-a93a15ef4645\",\n                \"title\": \"Database Developer\",\n                \"description\": \"We’re now looking for a Developer (can be remote or onsite) to work with us, as an architect and builder, developing and maintaining our online shop and community. You’ll be a builder and fundamental team member, with a voice on the course of the company, not just another cog in a machine\",\n                \"companyMarket\": \"Software House\",\n                \"companyName\": \"TAIKAI\",\n                \"type\": \"Full Time\",\n                \"location\": {\n                    \"planet\": \"Earth\",\n                    \"country\": \"Angola\",\n                    \"city\": \"Luanda\"\n                },\n                \"companyWebsite\": \"https://taikai.network\",\n                \"announcedBy\": {\n                    \"name\": \"Martial Doe\",\n                    \"role\": \"HR - Tech Recruiter\",\n                    \"email\": \"john.doe@taikai.com\"\n                },\n                \"createdAt\": \"2021-12-15T13:11:52.035Z\",\n                \"updatedAt\": \"2021-12-15T13:15:10.134Z\"\n            },\n            {\n                \"isDeleted\": false,\n                \"skills\": [\n                    \"nodejs\",\n                    \"react\",\n                    \"nextjs\"\n                ],\n                \"responsabilities\": [\n                    \"Develop new functionality and features\",\n                    \"Think about architecture and infrastructure solutions\",\n                    \"Implement design and front-end changes\"\n                ],\n                \"id\": \"b63c9032-315a-46f8-9d23-97f9d5aa1610\",\n                \"title\": \"Backend Developer\",\n                \"description\": \"We’re now looking for a Developer (can be remote or onsite) to work with us, as an architect and builder, developing and maintaining our online shop and community. You’ll be a builder and fundamental team member, with a voice on the course of the company, not just another cog in a machine\",\n                \"companyMarket\": \"Software House\",\n                \"companyName\": \"TAIKAI\",\n                \"type\": \"Full Time\",\n                \"location\": {\n                    \"planet\": \"Earth\",\n                    \"country\": \"Portugal\",\n                    \"city\": \"Porto\"\n                },\n                \"companyWebsite\": \"https://taikai.network\",\n                \"announcedBy\": {\n                    \"name\": \"John Doe\",\n                    \"role\": \"HR - Tech Recruiter\",\n                    \"email\": \"john.doe@taikai.com\"\n                },\n                \"createdAt\": \"2021-12-15T13:34:24.497Z\",\n                \"updatedAt\": \"2021-12-15T13:34:24.497Z\"\n            },\n            {\n                \"isDeleted\": false,\n                \"skills\": [\n                    \"nodejs\",\n                    \"react\",\n                    \"nextjs\"\n                ],\n                \"responsabilities\": [\n                    \"Develop new functionality and features\",\n                    \"Think about architecture and infrastructure solutions\",\n                    \"Implement design and front-end changes\"\n                ],\n                \"id\": \"6d267417-b72a-46c5-bda5-7a9285c3613c\",\n                \"title\": \"Backend Developer\",\n                \"description\": \"We’re now looking for a Developer (can be remote or onsite) to work with us, as an architect and builder, developing and maintaining our online shop and community. You’ll be a builder and fundamental team member, with a voice on the course of the company, not just another cog in a machine\",\n                \"companyMarket\": \"Software House\",\n                \"companyName\": \"TAIKAI\",\n                \"type\": \"Full Time\",\n                \"location\": {\n                    \"planet\": \"Earth\",\n                    \"country\": \"Portugal\",\n                    \"city\": \"Porto\"\n                },\n                \"companyWebsite\": \"https://taikai.network\",\n                \"announcedBy\": {\n                    \"name\": \"John Doe\",\n                    \"role\": \"HR - Tech Recruiter\",\n                    \"email\": \"john.doe@taikai.com\"\n                },\n                \"createdAt\": \"2021-12-15T13:38:16.263Z\",\n                \"updatedAt\": \"2021-12-15T13:38:16.263Z\"\n            },\n            {\n                \"isDeleted\": false,\n                \"skills\": [\n                    \"nodejs\",\n                    \"express\",\n                    \"mongodb\",\n                    \"swagger\"\n                ],\n                \"responsabilities\": [\n                    \"Develop new functionality and features\",\n                    \"Think about architecture and infrastructure solutions\",\n                    \"Implement design and front-end changes\"\n                ],\n                \"id\": \"6a51bceb-6353-4b5b-a834-f20c8815c5c0\",\n                \"title\": \"Backend Developer\",\n                \"description\": \"We’re now looking for a Developer (can be remote or onsite) to work with us, as an architect and builder, developing and maintaining our online shop and community. You’ll be a builder and fundamental team member, with a voice on the course of the company, not just another cog in a machine\",\n                \"companyMarket\": \"Software House\",\n                \"companyName\": \"Taikai\",\n                \"type\": \"Full Time\",\n                \"location\": {\n                    \"planet\": \"Eatrh\",\n                    \"country\": \"Portugal\",\n                    \"city\": \"Porto\"\n                },\n                \"companyWebsite\": \"https://taikai.network/en\",\n                \"announcedBy\": {\n                    \"name\": \"Hélder\",\n                    \"email\": \"helder@taikai.com\",\n                    \"role\": \"CTO\"\n                },\n                \"createdAt\": \"2021-12-15T20:03:37.468Z\",\n                \"updatedAt\": \"2021-12-15T20:03:37.468Z\"\n            }\n        ],\n        \"count\": 5\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get a Job",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/jobs/6a51bceb-6353-4b5b-a834-f20c8815c5c0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"jobs",
+								"6a51bceb-6353-4b5b-a834-f20c8815c5c0"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get a Job",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/jobs/6a51bceb-6353-4b5b-a834-f20c8815c5c0",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"jobs",
+										"6a51bceb-6353-4b5b-a834-f20c8815c5c0"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"msg\": \"Entities found, check the result on payload\",\n    \"payload\": {\n        \"isDeleted\": false,\n        \"skills\": [\n            \"nodejs\",\n            \"express\",\n            \"mongodb\",\n            \"swagger\"\n        ],\n        \"responsabilities\": [\n            \"Develop new functionality and features\",\n            \"Think about architecture and infrastructure solutions\",\n            \"Implement design and front-end changes\"\n        ],\n        \"id\": \"6a51bceb-6353-4b5b-a834-f20c8815c5c0\",\n        \"title\": \"Backend Developer\",\n        \"description\": \"We’re now looking for a Developer (can be remote or onsite) to work with us, as an architect and builder, developing and maintaining our online shop and community. You’ll be a builder and fundamental team member, with a voice on the course of the company, not just another cog in a machine\",\n        \"companyMarket\": \"Software House\",\n        \"companyName\": \"Taikai\",\n        \"type\": \"Full Time\",\n        \"location\": {\n            \"planet\": \"Eatrh\",\n            \"country\": \"Portugal\",\n            \"city\": \"Porto\"\n        },\n        \"companyWebsite\": \"https://taikai.network/en\",\n        \"announcedBy\": {\n            \"name\": \"Hélder\",\n            \"email\": \"helder@taikai.com\",\n            \"role\": \"CTO\"\n        },\n        \"createdAt\": \"2021-12-15T20:03:37.468Z\",\n        \"updatedAt\": \"2021-12-15T20:03:37.468Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "List Jobs - Sort by Title",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/jobs?page=1&limit=10&sort=+title",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"jobs"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "sort",
+									"value": "+title"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List Jobs - Sort by Title",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/jobs?page=1&limit=10&sort=+title",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"jobs"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "10"
+										},
+										{
+											"key": "sort",
+											"value": "+title"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.21.4"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 15 Dec 2021 20:06:45 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "4841"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"12e9-ZjGtk7foSLWQGwJFIOUKE3S0nCw\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"Entities found, check the result on payload\",\n    \"payload\": {\n        \"data\": [\n            {\n                \"isDeleted\": false,\n                \"skills\": [\n                    \"nodejs\",\n                    \"react\",\n                    \"nextjs\"\n                ],\n                \"responsabilities\": [\n                    \"Develop new functionality and features\",\n                    \"Think about architecture and infrastructure solutions\",\n                    \"Implement design and front-end changes\"\n                ],\n                \"id\": \"95b7bb88-57b6-4963-8bbf-dd0a04c66708\",\n                \"title\": \"Backend Developer\",\n                \"description\": \"We’re now looking for a Developer (can be remote or onsite) to work with us, as an architect and builder, developing and maintaining our online shop and community. You’ll be a builder and fundamental team member, with a voice on the course of the company, not just another cog in a machine\",\n                \"companyMarket\": \"Software House\",\n                \"companyName\": \"TAIKAI\",\n                \"type\": \"Full Time\",\n                \"location\": {\n                    \"planet\": \"Earth\",\n                    \"country\": \"Portugal\",\n                    \"city\": \"Porto\"\n                },\n                \"companyWebsite\": \"https://taikai.network\",\n                \"announcedBy\": {\n                    \"name\": \"John Doe\",\n                    \"role\": \"HR - Tech Recruiter\",\n                    \"email\": \"john.doe@taikai.com\"\n                },\n                \"createdAt\": \"2021-12-15T12:59:15.505Z\",\n                \"updatedAt\": \"2021-12-15T12:59:15.505Z\"\n            },\n            {\n                \"isDeleted\": false,\n                \"skills\": [\n                    \"nodejs\",\n                    \"react\",\n                    \"nextjs\"\n                ],\n                \"responsabilities\": [\n                    \"Develop new functionality and features\",\n                    \"Think about architecture and infrastructure solutions\",\n                    \"Implement design and front-end changes\"\n                ],\n                \"id\": \"b63c9032-315a-46f8-9d23-97f9d5aa1610\",\n                \"title\": \"Backend Developer\",\n                \"description\": \"We’re now looking for a Developer (can be remote or onsite) to work with us, as an architect and builder, developing and maintaining our online shop and community. You’ll be a builder and fundamental team member, with a voice on the course of the company, not just another cog in a machine\",\n                \"companyMarket\": \"Software House\",\n                \"companyName\": \"TAIKAI\",\n                \"type\": \"Full Time\",\n                \"location\": {\n                    \"planet\": \"Earth\",\n                    \"country\": \"Portugal\",\n                    \"city\": \"Porto\"\n                },\n                \"companyWebsite\": \"https://taikai.network\",\n                \"announcedBy\": {\n                    \"name\": \"John Doe\",\n                    \"role\": \"HR - Tech Recruiter\",\n                    \"email\": \"john.doe@taikai.com\"\n                },\n                \"createdAt\": \"2021-12-15T13:34:24.497Z\",\n                \"updatedAt\": \"2021-12-15T13:34:24.497Z\"\n            },\n            {\n                \"isDeleted\": false,\n                \"skills\": [\n                    \"nodejs\",\n                    \"react\",\n                    \"nextjs\"\n                ],\n                \"responsabilities\": [\n                    \"Develop new functionality and features\",\n                    \"Think about architecture and infrastructure solutions\",\n                    \"Implement design and front-end changes\"\n                ],\n                \"id\": \"6d267417-b72a-46c5-bda5-7a9285c3613c\",\n                \"title\": \"Backend Developer\",\n                \"description\": \"We’re now looking for a Developer (can be remote or onsite) to work with us, as an architect and builder, developing and maintaining our online shop and community. You’ll be a builder and fundamental team member, with a voice on the course of the company, not just another cog in a machine\",\n                \"companyMarket\": \"Software House\",\n                \"companyName\": \"TAIKAI\",\n                \"type\": \"Full Time\",\n                \"location\": {\n                    \"planet\": \"Earth\",\n                    \"country\": \"Portugal\",\n                    \"city\": \"Porto\"\n                },\n                \"companyWebsite\": \"https://taikai.network\",\n                \"announcedBy\": {\n                    \"name\": \"John Doe\",\n                    \"role\": \"HR - Tech Recruiter\",\n                    \"email\": \"john.doe@taikai.com\"\n                },\n                \"createdAt\": \"2021-12-15T13:38:16.263Z\",\n                \"updatedAt\": \"2021-12-15T13:38:16.263Z\"\n            },\n            {\n                \"isDeleted\": false,\n                \"skills\": [\n                    \"nodejs\",\n                    \"express\",\n                    \"mongodb\",\n                    \"swagger\"\n                ],\n                \"responsabilities\": [\n                    \"Develop new functionality and features\",\n                    \"Think about architecture and infrastructure solutions\",\n                    \"Implement design and front-end changes\"\n                ],\n                \"id\": \"6a51bceb-6353-4b5b-a834-f20c8815c5c0\",\n                \"title\": \"Backend Developer\",\n                \"description\": \"We’re now looking for a Developer (can be remote or onsite) to work with us, as an architect and builder, developing and maintaining our online shop and community. You’ll be a builder and fundamental team member, with a voice on the course of the company, not just another cog in a machine\",\n                \"companyMarket\": \"Software House\",\n                \"companyName\": \"Taikai\",\n                \"type\": \"Full Time\",\n                \"location\": {\n                    \"planet\": \"Eatrh\",\n                    \"country\": \"Portugal\",\n                    \"city\": \"Porto\"\n                },\n                \"companyWebsite\": \"https://taikai.network/en\",\n                \"announcedBy\": {\n                    \"name\": \"Hélder\",\n                    \"email\": \"helder@taikai.com\",\n                    \"role\": \"CTO\"\n                },\n                \"createdAt\": \"2021-12-15T20:03:37.468Z\",\n                \"updatedAt\": \"2021-12-15T20:03:37.468Z\"\n            },\n            {\n                \"isDeleted\": false,\n                \"skills\": [\n                    \"mongo\",\n                    \"sql\",\n                    \"nextjs\"\n                ],\n                \"responsabilities\": [\n                    \"Develop new functionality and features\",\n                    \"Think about architecture and infrastructure solutions\",\n                    \"Implement design and front-end changes\"\n                ],\n                \"id\": \"3cd6e982-3ff3-433b-9db8-a93a15ef4645\",\n                \"title\": \"Database Developer\",\n                \"description\": \"We’re now looking for a Developer (can be remote or onsite) to work with us, as an architect and builder, developing and maintaining our online shop and community. You’ll be a builder and fundamental team member, with a voice on the course of the company, not just another cog in a machine\",\n                \"companyMarket\": \"Software House\",\n                \"companyName\": \"TAIKAI\",\n                \"type\": \"Full Time\",\n                \"location\": {\n                    \"planet\": \"Earth\",\n                    \"country\": \"Angola\",\n                    \"city\": \"Luanda\"\n                },\n                \"companyWebsite\": \"https://taikai.network\",\n                \"announcedBy\": {\n                    \"name\": \"Martial Doe\",\n                    \"role\": \"HR - Tech Recruiter\",\n                    \"email\": \"john.doe@taikai.com\"\n                },\n                \"createdAt\": \"2021-12-15T13:11:52.035Z\",\n                \"updatedAt\": \"2021-12-15T13:15:10.134Z\"\n            }\n        ],\n        \"count\": 5\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "List Jobs - Filter by Country",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/jobs?page=1&country=Portugal",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"jobs"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "country",
+									"value": "Portugal"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List Jobs - Filter by Country",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/jobs?page=1&country=Portugal",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"jobs"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "country",
+											"value": "Portugal"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.21.4"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 15 Dec 2021 20:06:49 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "3889"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f31-YcWVXj6fcso5X82uXwL9Y3EoUgc\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"Entities found, check the result on payload\",\n    \"payload\": {\n        \"data\": [\n            {\n                \"isDeleted\": false,\n                \"skills\": [\n                    \"nodejs\",\n                    \"react\",\n                    \"nextjs\"\n                ],\n                \"responsabilities\": [\n                    \"Develop new functionality and features\",\n                    \"Think about architecture and infrastructure solutions\",\n                    \"Implement design and front-end changes\"\n                ],\n                \"id\": \"95b7bb88-57b6-4963-8bbf-dd0a04c66708\",\n                \"title\": \"Backend Developer\",\n                \"description\": \"We’re now looking for a Developer (can be remote or onsite) to work with us, as an architect and builder, developing and maintaining our online shop and community. You’ll be a builder and fundamental team member, with a voice on the course of the company, not just another cog in a machine\",\n                \"companyMarket\": \"Software House\",\n                \"companyName\": \"TAIKAI\",\n                \"type\": \"Full Time\",\n                \"location\": {\n                    \"planet\": \"Earth\",\n                    \"country\": \"Portugal\",\n                    \"city\": \"Porto\"\n                },\n                \"companyWebsite\": \"https://taikai.network\",\n                \"announcedBy\": {\n                    \"name\": \"John Doe\",\n                    \"role\": \"HR - Tech Recruiter\",\n                    \"email\": \"john.doe@taikai.com\"\n                },\n                \"createdAt\": \"2021-12-15T12:59:15.505Z\",\n                \"updatedAt\": \"2021-12-15T12:59:15.505Z\"\n            },\n            {\n                \"isDeleted\": false,\n                \"skills\": [\n                    \"nodejs\",\n                    \"react\",\n                    \"nextjs\"\n                ],\n                \"responsabilities\": [\n                    \"Develop new functionality and features\",\n                    \"Think about architecture and infrastructure solutions\",\n                    \"Implement design and front-end changes\"\n                ],\n                \"id\": \"b63c9032-315a-46f8-9d23-97f9d5aa1610\",\n                \"title\": \"Backend Developer\",\n                \"description\": \"We’re now looking for a Developer (can be remote or onsite) to work with us, as an architect and builder, developing and maintaining our online shop and community. You’ll be a builder and fundamental team member, with a voice on the course of the company, not just another cog in a machine\",\n                \"companyMarket\": \"Software House\",\n                \"companyName\": \"TAIKAI\",\n                \"type\": \"Full Time\",\n                \"location\": {\n                    \"planet\": \"Earth\",\n                    \"country\": \"Portugal\",\n                    \"city\": \"Porto\"\n                },\n                \"companyWebsite\": \"https://taikai.network\",\n                \"announcedBy\": {\n                    \"name\": \"John Doe\",\n                    \"role\": \"HR - Tech Recruiter\",\n                    \"email\": \"john.doe@taikai.com\"\n                },\n                \"createdAt\": \"2021-12-15T13:34:24.497Z\",\n                \"updatedAt\": \"2021-12-15T13:34:24.497Z\"\n            },\n            {\n                \"isDeleted\": false,\n                \"skills\": [\n                    \"nodejs\",\n                    \"react\",\n                    \"nextjs\"\n                ],\n                \"responsabilities\": [\n                    \"Develop new functionality and features\",\n                    \"Think about architecture and infrastructure solutions\",\n                    \"Implement design and front-end changes\"\n                ],\n                \"id\": \"6d267417-b72a-46c5-bda5-7a9285c3613c\",\n                \"title\": \"Backend Developer\",\n                \"description\": \"We’re now looking for a Developer (can be remote or onsite) to work with us, as an architect and builder, developing and maintaining our online shop and community. You’ll be a builder and fundamental team member, with a voice on the course of the company, not just another cog in a machine\",\n                \"companyMarket\": \"Software House\",\n                \"companyName\": \"TAIKAI\",\n                \"type\": \"Full Time\",\n                \"location\": {\n                    \"planet\": \"Earth\",\n                    \"country\": \"Portugal\",\n                    \"city\": \"Porto\"\n                },\n                \"companyWebsite\": \"https://taikai.network\",\n                \"announcedBy\": {\n                    \"name\": \"John Doe\",\n                    \"role\": \"HR - Tech Recruiter\",\n                    \"email\": \"john.doe@taikai.com\"\n                },\n                \"createdAt\": \"2021-12-15T13:38:16.263Z\",\n                \"updatedAt\": \"2021-12-15T13:38:16.263Z\"\n            },\n            {\n                \"isDeleted\": false,\n                \"skills\": [\n                    \"nodejs\",\n                    \"express\",\n                    \"mongodb\",\n                    \"swagger\"\n                ],\n                \"responsabilities\": [\n                    \"Develop new functionality and features\",\n                    \"Think about architecture and infrastructure solutions\",\n                    \"Implement design and front-end changes\"\n                ],\n                \"id\": \"6a51bceb-6353-4b5b-a834-f20c8815c5c0\",\n                \"title\": \"Backend Developer\",\n                \"description\": \"We’re now looking for a Developer (can be remote or onsite) to work with us, as an architect and builder, developing and maintaining our online shop and community. You’ll be a builder and fundamental team member, with a voice on the course of the company, not just another cog in a machine\",\n                \"companyMarket\": \"Software House\",\n                \"companyName\": \"Taikai\",\n                \"type\": \"Full Time\",\n                \"location\": {\n                    \"planet\": \"Eatrh\",\n                    \"country\": \"Portugal\",\n                    \"city\": \"Porto\"\n                },\n                \"companyWebsite\": \"https://taikai.network/en\",\n                \"announcedBy\": {\n                    \"name\": \"Hélder\",\n                    \"email\": \"helder@taikai.com\",\n                    \"role\": \"CTO\"\n                },\n                \"createdAt\": \"2021-12-15T20:03:37.468Z\",\n                \"updatedAt\": \"2021-12-15T20:03:37.468Z\"\n            }\n        ],\n        \"count\": 4\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create a Job",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Backend Developer\",\r\n    \"description\": \"We’re now looking for a Developer (can be remote or onsite) to work with us, as an architect and builder, developing and maintaining our online shop and community. You’ll be a builder and fundamental team member, with a voice on the course of the company, not just another cog in a machine\",\r\n    \"skills\": [\"nodejs\", \"express\", \"mongodb\", \"swagger\"],\r\n    \"companyMarket\": \"Software House\",\r\n    \"companyName\": \"Taikai\",\r\n    \"type\": \"Full Time\",\r\n    \"location\": {\r\n        \"planet\": \"Eatrh\",\r\n        \"country\": \"Portugal\",\r\n        \"city\": \"Porto\"\r\n    },\r\n    \"companyWebsite\": \"https://taikai.network/en\",\r\n    \"responsabilities\": [\r\n        \"Develop new functionality and features\",\r\n        \"Think about architecture and infrastructure solutions\",\r\n        \"Implement design and front-end changes\"\r\n    ],\r\n    \"announcedBy\": {\r\n        \"name\": \"Hélder\",\r\n        \"email\": \"helder@taikai.com\",\r\n        \"role\": \"CTO\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/jobs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"jobs"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create a Job",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Backend Developer\",\r\n    \"description\": \"We’re now looking for a Developer (can be remote or onsite) to work with us, as an architect and builder, developing and maintaining our online shop and community. You’ll be a builder and fundamental team member, with a voice on the course of the company, not just another cog in a machine\",\r\n    \"skills\": [\"nodejs\", \"express\", \"mongodb\", \"swagger\"],\r\n    \"companyMarket\": \"Software House\",\r\n    \"companyName\": \"Taikai\",\r\n    \"type\": \"Full Time\",\r\n    \"location\": {\r\n        \"planet\": \"Eatrh\",\r\n        \"country\": \"Portugal\",\r\n        \"city\": \"Porto\"\r\n    },\r\n    \"companyWebsite\": \"https://taikai.network/en\",\r\n    \"responsabilities\": [\r\n        \"Develop new functionality and features\",\r\n        \"Think about architecture and infrastructure solutions\",\r\n        \"Implement design and front-end changes\"\r\n    ],\r\n    \"announcedBy\": {\r\n        \"name\": \"Hélder\",\r\n        \"email\": \"helder@taikai.com\",\r\n        \"role\": \"CTO\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/jobs",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"jobs"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"msg\": \"Entity created successfully!\",\n    \"payload\": {\n        \"isDeleted\": false,\n        \"skills\": [\n            \"nodejs\",\n            \"express\",\n            \"mongodb\",\n            \"swagger\"\n        ],\n        \"responsabilities\": [\n            \"Develop new functionality and features\",\n            \"Think about architecture and infrastructure solutions\",\n            \"Implement design and front-end changes\"\n        ],\n        \"id\": \"6a51bceb-6353-4b5b-a834-f20c8815c5c0\",\n        \"title\": \"Backend Developer\",\n        \"description\": \"We’re now looking for a Developer (can be remote or onsite) to work with us, as an architect and builder, developing and maintaining our online shop and community. You’ll be a builder and fundamental team member, with a voice on the course of the company, not just another cog in a machine\",\n        \"companyMarket\": \"Software House\",\n        \"companyName\": \"Taikai\",\n        \"type\": \"Full Time\",\n        \"location\": {\n            \"planet\": \"Eatrh\",\n            \"country\": \"Portugal\",\n            \"city\": \"Porto\"\n        },\n        \"companyWebsite\": \"https://taikai.network/en\",\n        \"announcedBy\": {\n            \"name\": \"Hélder\",\n            \"email\": \"helder@taikai.com\",\n            \"role\": \"CTO\"\n        },\n        \"createdAt\": \"2021-12-15T20:03:37.468Z\",\n        \"updatedAt\": \"2021-12-15T20:03:37.468Z\",\n        \"_id\": \"6a51bceb-6353-4b5b-a834-f20c8815c5c0\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update a Job",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"NodeJS Developer\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/jobs/6a51bceb-6353-4b5b-a834-f20c8815c5c0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"jobs",
+								"6a51bceb-6353-4b5b-a834-f20c8815c5c0"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update a Job",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"NodeJS Developer\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/jobs/6a51bceb-6353-4b5b-a834-f20c8815c5c0",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"jobs",
+										"6a51bceb-6353-4b5b-a834-f20c8815c5c0"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.21.4"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 15 Dec 2021 20:08:34 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "996"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3e4-QoQPhI7fF/vG+pq844v8gmt4f8A\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"Entity updated successfully!\",\n    \"payload\": {\n        \"isDeleted\": false,\n        \"skills\": [\n            \"nodejs\",\n            \"express\",\n            \"mongodb\",\n            \"swagger\"\n        ],\n        \"responsabilities\": [\n            \"Develop new functionality and features\",\n            \"Think about architecture and infrastructure solutions\",\n            \"Implement design and front-end changes\"\n        ],\n        \"id\": \"6a51bceb-6353-4b5b-a834-f20c8815c5c0\",\n        \"title\": \"NodeJS Developer\",\n        \"description\": \"We’re now looking for a Developer (can be remote or onsite) to work with us, as an architect and builder, developing and maintaining our online shop and community. You’ll be a builder and fundamental team member, with a voice on the course of the company, not just another cog in a machine\",\n        \"companyMarket\": \"Software House\",\n        \"companyName\": \"Taikai\",\n        \"type\": \"Full Time\",\n        \"location\": {\n            \"planet\": \"Eatrh\",\n            \"country\": \"Portugal\",\n            \"city\": \"Porto\"\n        },\n        \"companyWebsite\": \"https://taikai.network/en\",\n        \"announcedBy\": {\n            \"name\": \"Hélder\",\n            \"email\": \"helder@taikai.com\",\n            \"role\": \"CTO\"\n        },\n        \"createdAt\": \"2021-12-15T20:03:37.468Z\",\n        \"updatedAt\": \"2021-12-15T20:08:34.616Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete a Job",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"NodeJS Developer\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/jobs/6a51bceb-6353-4b5b-a834-f20c8815c5c0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"jobs",
+								"6a51bceb-6353-4b5b-a834-f20c8815c5c0"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete a Job",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"NodeJS Developer\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/jobs/6a51bceb-6353-4b5b-a834-f20c8815c5c0",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"jobs",
+										"6a51bceb-6353-4b5b-a834-f20c8815c5c0"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.21.4"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 15 Dec 2021 20:09:37 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "189"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"bd-Un/nc6O9qQLJMuJdirrHFkBS5b0\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"Entity deleted successfully!\",\n    \"payload\": {\n        \"isDeleted\": true,\n        \"id\": \"6a51bceb-6353-4b5b-a834-f20c8815c5c0\",\n        \"createdAt\": \"2021-12-15T20:03:37.468Z\",\n        \"updatedAt\": \"2021-12-15T20:09:37.575Z\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Subscriptions",
+			"item": [
+				{
+					"name": "Verify Email",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/subscriptions/52bdf41d-ba9d-43a2-870a-f39b2d3a4563/verify",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"subscriptions",
+								"52bdf41d-ba9d-43a2-870a-f39b2d3a4563",
+								"verify"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Verify Email",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/subscriptions/52bdf41d-ba9d-43a2-870a-f39b2d3a4563/verify",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"subscriptions",
+										"52bdf41d-ba9d-43a2-870a-f39b2d3a4563",
+										"verify"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.21.4"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 15 Dec 2021 20:15:11 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "66"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"42-3qBRYp38Kj8XvFUcFMxXbJWNy/I\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"Entity updated successfully!\",\n    \"payload\": {\n        \"verified\": true\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Unsubscribe",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/subscriptions/52bdf41d-ba9d-43a2-870a-f39b2d3a4563/cancel",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"subscriptions",
+								"52bdf41d-ba9d-43a2-870a-f39b2d3a4563",
+								"cancel"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Unsubscribe",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/subscriptions/52bdf41d-ba9d-43a2-870a-f39b2d3a4563/cancel",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"subscriptions",
+										"52bdf41d-ba9d-43a2-870a-f39b2d3a4563",
+										"cancel"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.21.4"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 15 Dec 2021 20:16:48 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "65"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"41-19GVrPfWvsJhUkf5/Cdkft7lQeg\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"Entity deleted successfully!\",\n    \"payload\": {\n        \"deleted\": true\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Subscribe",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Josemar Caculo Hebo\",\r\n    \"email\": \"josemar@taikai.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/subscriptions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"subscriptions"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Subscribe",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Josemar Caculo Hebo\",\r\n    \"email\": \"josemar@taikai.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/subscriptions",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"subscriptions"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.21.4"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 15 Dec 2021 20:13:38 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "310"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"136-y/B27hvJlUaI7jV0rSbd4ILsqh8\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"Entity created successfully!\",\n    \"payload\": {\n        \"isDeleted\": false,\n        \"verified\": false,\n        \"id\": \"52bdf41d-ba9d-43a2-870a-f39b2d3a4563\",\n        \"name\": \"Josemar Caculo Hebo\",\n        \"email\": \"josemar@taikai.com\",\n        \"createdAt\": \"2021-12-15T20:13:37.958Z\",\n        \"updatedAt\": \"2021-12-15T20:13:37.958Z\",\n        \"_id\": \"52bdf41d-ba9d-43a2-870a-f39b2d3a4563\"\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
