@@ -69,15 +69,6 @@ Open the API Docs to learn more about the available endpoints, how to use them, 
 
 ![-----------------------------------------------------](https://res.cloudinary.com/olyn/image/upload/v1637594127/GitHub%20Images/rainbow_xj5iyq.png)
 
-## :bar_chart: Tests
-To execute the tests, run the test script for each service:
-
-You should have a similar output:
-
-![Gif](https://res.cloudinary.com/olyn/image/upload/v1639616649/GitHub%20Images/test-job-rest-api_tyzto7.gif)
-
-![-----------------------------------------------------](https://res.cloudinary.com/olyn/image/upload/v1637594127/GitHub%20Images/rainbow_xj5iyq.png)
-
 ## :whale2: Running in Docker
 
 You can run the application on Docker, using the docker-compose commands to do so:
