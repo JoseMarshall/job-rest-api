@@ -18,7 +18,7 @@ In this first version, it provides endpoints to:
 * Unsubscribe: `GET /api/v1/subscriptions/{id}/cancel`
 * Verify Email Address: `GET /api/v1/subscriptions/{id}/verify`
 * API Docs: `GET /api/v1/subscriptions/api-docs`
-
+</details>
 <details><summary> :fire: Techs/Libs/Frameworks</summary>
 
 - [`Typescript`](https://www.typescriptlang.org/)
